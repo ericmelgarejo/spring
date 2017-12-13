@@ -57,6 +57,7 @@ public class InstructorExamenController {
 //		}catch(Exception e) {
 //			e.printStackTrace();
 //		}
+		
 		return new ModelAndView("listaInscritosEventoInstructor");
 	}
 }

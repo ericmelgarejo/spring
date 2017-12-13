@@ -107,6 +107,7 @@ public class InscripcionVO {
 	/**
 	 * @return the apellido_materno
 	 */
+	
 	public String getApellido_materno() {
 		return apellido_materno;
 	}

@@ -16,4 +16,5 @@ public interface IInstructorExamenService {
 	public ArrayList<EventoVO> consultaEventosInstructor(EventoVO evento) throws Exception;
 	public ArrayList<InscripcionVO> consultaInscritosEventoInstructor(InscripcionVO inscripcion) throws Exception;
 	
+	
 }
