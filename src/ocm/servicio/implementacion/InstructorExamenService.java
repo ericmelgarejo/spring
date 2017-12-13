@@ -40,7 +40,14 @@ public class InstructorExamenService implements IInstructorExamenService {
 	@Override
 	public ArrayList<InscripcionVO> consultaInscritosEventoInstructor(InscripcionVO inscripcion) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		ArrayList<InscripcionVO> listaInscripciones = new ArrayList<InscripcionVO>();
+		try {
+			listaInscripciones = instructorExamenDAO.consultaInscritosEventoInstructor(inscripcion);
+		}catch(Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return listaInscripciones;
 	}
 
 }

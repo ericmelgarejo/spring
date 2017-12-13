@@ -29,7 +29,7 @@ public class InstructorExamenDAO implements IInstructorExamenDAO {
 	public ArrayList<EventoVO> consultaEventosInstructor(EventoVO evento) throws Exception {
 		// TODO Auto-generated method stub
 		ArrayList<EventoVO> listaPaises = new ArrayList<EventoVO>();
-		String sql = "select * from eventos";
+		String sql = "select * from eventos where usuario_id = 12";
 		
 		try {
 			listaPaises = (ArrayList<EventoVO>) jdbcTemplate.query(sql, new RowMapper<EventoVO>() {
@@ -53,7 +53,26 @@ public class InstructorExamenDAO implements IInstructorExamenDAO {
 	@Override
 	public ArrayList<InscripcionVO> consultaInscritosEventoInstructor(InscripcionVO inscripcion) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		ArrayList<InscripcionVO> listaPaises = new ArrayList<InscripcionVO>();
+		String sql = "select * from inscripciones";
+		
+		try {
+			listaPaises = (ArrayList<InscripcionVO>) jdbcTemplate.query(sql, new RowMapper<InscripcionVO>() {
+				
+				public InscripcionVO mapRow(final ResultSet result,
+						final int rowNum) throws SQLException{
+						InscripcionVO inscripcion = new InscripcionVO();
+						inscripcion.setId_inscripcion(result.getInt("id"));
+						inscripcion.setNombre(result.getString("nombre"));
+												
+						return inscripcion;
+				}
+			});
+		}catch(Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return listaPaises;
 	}
 
 }

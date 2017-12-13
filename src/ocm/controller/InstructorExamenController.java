@@ -48,15 +48,15 @@ public class InstructorExamenController {
 	
 	@RequestMapping("ver-inscritos.do")
 	public ModelAndView listaInscritosEvento(@ModelAttribute("evento") final InscripcionVO inscripcion, final Model model, final BindingResult result) {
-//		try {
-//			ArrayList<InscripcionVO> listaInscritos = new ArrayList<InscripcionVO>();
-//				if(!result.hasErrors()) {
-//				    listaInscritos = instructorService.consultaInscritosEventoInstructor(inscripcion);
-//					model.addAttribute("listaInscritos", listaInscritos );
-//				}
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
+		try {
+			ArrayList<InscripcionVO> listaInscritos = new ArrayList<InscripcionVO>();
+				if(!result.hasErrors()) {
+				    listaInscritos = instructorService.consultaInscritosEventoInstructor(inscripcion);
+					model.addAttribute("listaInscritos", listaInscritos );
+				}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		return new ModelAndView("listaInscritosEventoInstructor");
 	}
