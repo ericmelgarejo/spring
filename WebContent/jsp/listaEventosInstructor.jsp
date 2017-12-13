@@ -132,7 +132,7 @@
 								<div id="datatables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 									<div class="row">
 										<div class="col-sm-12">
-										<form:form action="/listaInstructor/ver-inscritos" method="post" modelAttribute="evento">
+										<form:form action="ver-inscritos.do" method="post" modelAttribute="evento">
 											<table id="datatables-example" class="table table-striped table-bordered dataTable no-footer" width="100%" cellspacing="0" role="grid" aria-describedby="datatables-example_info" style="width: 100%;">
 												<thead>
 													<tr role="row">
@@ -178,7 +178,7 @@
 																<td style="text-align: center;">${Evento.fecha_inicio}</td>
 																<td style="text-align: center;">${Evento.fecha_fin}</td>
 																<td style="text-align: center;">${Evento.nombre_curso}</td>
- 																<td style="text-align: center;"><button class="btn btn-info" name="detallesListaEvento" value="${Evento.id_evento }">Ver Detalles</button></td>
+ 																<td style="text-align: center;"><form:button path="id" class="btn btn-info" name="detallesListaEvento" value="${Evento.id_evento }">Ver Detalles</form:button></td>
  																<td style="text-align: center;"><button class="btn btn-warning" name="modificarEvento" value="${Evento.id_evento }">Modificar</button></td>
 																<td style="text-align: center;"><button class="btn btn-danger" name="eliminarEvento" value="${Evento.id_evento }">Eliminar</button></td>
 																

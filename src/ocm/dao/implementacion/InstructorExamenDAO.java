@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 
 import ocm.dao.interfaces.IInstructorExamenDAO;
 import ocm.vo.EventoVO;
+import ocm.vo.InscripcionVO;
 
 /**
  * @author Eric
@@ -46,6 +47,12 @@ public class InstructorExamenDAO implements IInstructorExamenDAO {
 			throw e;
 		}
 		return listaPaises;
+	}
+
+	@Override
+	public ArrayList<InscripcionVO> consultaInscritosEventoInstructor(InscripcionVO inscripcion) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

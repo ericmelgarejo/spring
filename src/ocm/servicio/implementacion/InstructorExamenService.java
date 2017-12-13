@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import ocm.dao.interfaces.IInstructorExamenDAO;
 import ocm.servicio.interfaces.IInstructorExamenService;
 import ocm.vo.EventoVO;
+import ocm.vo.InscripcionVO;
 
 /**
  * @author Eric
@@ -34,6 +35,11 @@ public class InstructorExamenService implements IInstructorExamenService {
 			throw e;
 		}
 		return listaEventos;
+	}
+	@Override
+	public ArrayList<InscripcionVO> consultaInscritosEventoInstructor(InscripcionVO inscripcion) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
